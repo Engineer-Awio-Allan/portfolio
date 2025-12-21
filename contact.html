@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Awio<span>Allan</span></a>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h1>Get In Touch</h1>
+                    <div class="underline"></div>
+                    <p style="max-width: 600px; margin: 1rem auto 0;">Have a project in mind? Let's discuss how we can work together.</p>
+                </div>
+
+                <div class="contact-container">
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h2 style="margin-bottom: 2rem;">Contact Information</h2>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3>Location</h3>
+                                <p>Ayago East, Lira City</p>
+                                <p>Northern Region, Uganda</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+256760184318</p>
+                                <p>+265767446823</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3>Email</h3>
+                                <p>allanawio.dev@gmail.com</p>
+                                <p>allanawio20@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3>Working Hours</h3>
+                                <p>Monday - Friday: 9am - 6pm</p>
+                                <p>Weekends: By appointment</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Links -->
+                        <div style="margin-top: 3rem;">
+                            <h3 style="margin-bottom: 1rem;">Follow Me</h3>
+                            <div class="social-links" style="justify-content: flex-start;">
+                                <a href="#" style="background-color: var(--secondary); width: 40px; height: 40px; 
+                                    display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" style="background-color: var(--secondary); width: 40px; height: 40px; 
+                                    display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" style="background-color: var(--secondary); width: 40px; height: 40px; 
+                                    display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" style="background-color: var(--secondary); width: 40px; height: 40px; 
+                                    display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h2 style="margin-bottom: 2rem;">Send a Message</h2>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div style="margin-top: 5rem;">
+                    <h2 style="text-align: center; margin-bottom: 3rem;">Frequently Asked Questions</h2>
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <details style="margin-bottom: 1rem; padding: 1rem; background: white; border-radius: 4px; box-shadow: var(--shadow);">
+                            <summary style="font-weight: 600; cursor: pointer;">What is your typical project timeline?</summary>
+                            <p style="margin-top: 1rem; padding-left: 1rem;">Most projects take 2-8 weeks depending on complexity. I'll provide a detailed timeline after our initial consultation.</p>
+                        </details>
+                        
+                        <details style="margin-bottom: 1rem; padding: 1rem; background: white; border-radius: 4px; box-shadow: var(--shadow);">
+                            <summary style="font-weight: 600; cursor: pointer;">Do you offer ongoing maintenance?</summary>
+                            <p style="margin-top: 1rem; padding-left: 1rem;">Yes, I offer maintenance packages that include updates, security monitoring, and technical support.</p>
+                        </details>
+                        
+                        <details style="margin-bottom: 1rem; padding: 1rem; background: white; border-radius: 4px; box-shadow: var(--shadow);">
+                            <summary style="font-weight: 600; cursor: pointer;">What is your payment structure?</summary>
+                            <p style="margin-top: 1rem; padding-left: 1rem;">I typically work with 50% upfront and 50% upon completion. For larger projects, we can arrange milestone payments.</p>
+                        </details>
+
+                        <details style="margin-bottom: 1rem; padding: 1rem; background: white; border-radius: 4px; box-shadow: var(--shadow);">
+                            <summary style="font-weight: 600; cursor: pointer;">How much is the website?</summary>
+                            <p style="margin-top: 1rem; padding-left: 1rem;"> Simple static websites are more affordable, while dynamic websites with custom systems, databases, and integrations cost more. Pricing is based on design requirements, functionality, and overall project scope.</p>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="index.html" class="logo" style="color: white;">Port<span>folio</span></a>
+                    <p style="margin-top: 1rem; opacity: 0.9;">Creating digital experiences that matter</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 John Doe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
