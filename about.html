@@ -1,27 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Awio Allan | Computer Engineer</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root{
+      --brand: #0d6efd;
+      --accent: #17a2b8;
+      --muted: #6c757d;
+      --shadow: 0 6px 18px rgba(20,20,50,0.08);
+    }
+
+    body{
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: #222;
+      background: #f8f9fa;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(13,110,253,0.08), rgba(23,162,184,0.06));
+      padding: 4.5rem 0;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .skill-icon {
+      width: 72px;
+      height: 72px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius: 50%;
+      background: white;
+      box-shadow: var(--shadow);
+      color: var(--brand);
+      font-size: 1.6rem;
+    }
+
+    .underline {
+      width: 64px;
+      height: 4px;
+      background: var(--brand);
+      border-radius: 2px;
+      margin-top: .5rem;
+    }
+
+    footer{
+      background: #0b1220;
+      color: #cfd8e3;
+      padding: 2.5rem 0;
+    }
+
+    .btn-outline-brand{
+      border-color: var(--brand);
+      color: var(--brand);
+    }
+
+    @media (min-width: 992px){
+      .hero-title { font-size: 3rem; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <a href="index.html" class="logo">Port<span>folio</span></a>
-            <button class="mobile-menu-btn">☰</button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Awio Allan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <!--<li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>-->
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn-primary ms-lg-3" href="contact.html">Get Started</a>
+      </div>
+    </div>
+  </nav>
     <main>
         <section>
             <div class="container">
@@ -33,11 +103,11 @@
                 <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start;">
                     <!-- Profile Image -->
                     <div style="text-align: center;">
-                        <div style="width: 250px; height: 250px; background-color: var(--light); border-radius: 50%; margin: 0 auto 2rem; 
+                        <div style="width: 300px; height: 300px; background-color: var(--light); border-radius: 50%; margin: 0 auto 2rem; 
                             display: flex; align-items: center; justify-content: center; font-size: 4rem; color: var(--secondary);">
-                            <i class="fas fa-user"></i>
+                            <img src="assets/awio.jpeg" alt="Awio Allan" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;"></img>
                         </div>
-                        <h3>Allan Awio</h3>
+                        <h3>Awio Allan</h3>
                         <p style="color: var(--secondary); margin-bottom: 1rem;">Web Developer & Designer</p>
                         <a href="contact.html" class="btn">Contact Me</a>
                     </div>
@@ -46,25 +116,26 @@
                     <div>
                         <h2 style="margin-bottom: 1.5rem;">My Story</h2>
                         <p style="margin-bottom: 1.5rem;">
-                            Hello! I'm Allan, a passionate web developer and designer with over 5 years of experience 
-                            creating digital solutions. My journey started with a Computer Science degree and evolved 
+                            Hello! I'm Allan, a passionate web developer and designer with years of experience in
+                            creating digital solutions. My journey started with a Computer Engineering degree and evolved 
                             into a career where I blend technical skills with creative design.
                         </p>
                         
                         <h3 style="margin-bottom: 1rem;">Experience</h3>
                         <div style="margin-bottom: 2rem; padding-left: 1.5rem; border-left: 3px solid var(--secondary);">
-                            <p><strong>Web Developer</strong> - GrowFund Microfinance (2025-Present)</p>
-                            <p><strong>Biometric Voters Verification Trainer</strong> Electoral Commission (2025-present)</p>
-                            <p><strong> intern trainee Web Designer</strong> - Ralidali Co Ltd (2024)</p>
+                            <p><strong>Web Developer</strong> - GrowFund microfinnace. (2025-Present)</p>
+                            <p><strong>Biometric Voters Verification Kit(BVVK) Trineer</strong> - Electoral Commission Uganda(2025 - present)</p>
+                            <p><strong>Intern Trainee</strong> - Ralidali Company Ltd (2024)</p>
+                             <p><strong>Intern Trainee</strong> - Fundi-Bots(2023)</p>
                         </div>
 
                         <h3 style="margin-bottom: 1rem;">Skills</h3>
                         <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;">
                             <span style="background-color: var(--light); padding: 0.5rem 1rem; border-radius: 20px;">HTML/CSS</span>
                             <span style="background-color: var(--light); padding: 0.5rem 1rem; border-radius: 20px;">JavaScript</span>
-                            <span style="background-color: var(--light); padding: 0.5rem 1rem; border-radius: 20px;">Ruby</span>
                             <span style="background-color: var(--light); padding: 0.5rem 1rem; border-radius: 20px;">Ruby on Rails</span>
-                            <span style="background-color: var(--light); padding: 0.5rem 1rem; border-radius: 20px;">Bootstrap Css</span>
+                            <span style="background-color: var(--light); padding: 0.5rem 1rem; border-radius: 20px;">UI/UX Design</span>
+                            <span style="background-color: var(--light); padding: 0.5rem 1rem; border-radius: 20px;">Responsive Design</span>
                             <span style="background-color: var(--light); padding: 0.5rem 1rem; border-radius: 20px;">Git</span>
                             <span style="background-color: var(--light); padding: 0.5rem 1rem; border-radius: 20px;">Heroku</span>
                         </div>
@@ -72,7 +143,7 @@
                         <h3 style="margin-bottom: 1rem;">Education</h3>
                         <p style="margin-bottom: 2rem;">
                             <strong>Bachelor of Science in Computer Engineering</strong><br>
-                            Busitema University, 2025
+                            Busitema University.
                         </p>
                     </div>
                 </div>
@@ -80,26 +151,24 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <a href="index.html" class="logo" style="color: white;">Port<span>folio</span></a>
-                    <p style="margin-top: 1rem; opacity: 0.9;">Creating digital experiences that matter</p>
-                </div>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Awio Allan All rights reserved.</p>
-            </div>
+     <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <p class="mb-0">&copy; 2025 Awio Allan. All rights reserved.</p>
+          <small class="d-block text-muted">Computer Engineer & IT Solutions Expert</small>
         </div>
-    </footer>
+        <div class="col-md-6 text-center text-md-end">
+          <a class="text-light me-3" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a class="text-light me-3" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a class="text-light" href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
